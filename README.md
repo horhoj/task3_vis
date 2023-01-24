@@ -1,3 +1,5 @@
+Визуализация данных для тестового задания
+
 react+typescript+redux-toolkit
 
 запуск 
@@ -5,4 +7,6 @@ react+typescript+redux-toolkit
 yarn
 
 yarn start
+
+
 
