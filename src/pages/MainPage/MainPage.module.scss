@@ -1,4 +1,76 @@
 .wrap {
+  padding: 50px 200px 30px 200px;
+  overflow: auto;
+  background-color: #333;
+
 }
 
+.wrapInternal {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  position: relative;
+}
 
+.block {
+  height: 30px;
+  background-color: darkslategray;
+  position: relative;
+}
+
+.blockStartDateLabel {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  min-width: 200px;
+  right: calc(100% + 10px);
+  height: 30px;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 14px;
+}
+
+.blockEndDateLabel {
+  position: absolute;
+  left: calc(100% + 10px);
+  z-index: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  min-width: 200px;
+  height: 30px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.gridWrap {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  left: 0;
+  right: 0;
+
+  height: 100%;
+  border-left: 1px solid #555;
+
+
+  & > div {
+    border-right: 1px solid #555;
+  }
+
+  & > div:nth-child(25n) {
+    border-right: none;
+  }
+}
+
+.gridColumnTitle {
+  font-size: 14px;
+  display: flex;
+  position: relative;
+
+  & > div {
+    position: absolute;
+    top: -25px;
+    left: -18px;
+  }
+}
